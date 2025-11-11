@@ -9,6 +9,7 @@ import { CreateMessageResultSchema } from "@modelcontextprotocol/sdk/types.js";
 import { anonymizeObject } from "./anonymizer";
 import { initAnonymizeTextTool } from "./tool.anonymize.text";
 import { initAnonymizeFileTool } from "./tool.anonymize.file";
+import { initGenerateTestExamplesFromJavaClass } from "./prompt.anonymize.class.content";
 
 const server = new McpServer({
   name: "kitt-mcp-server",
@@ -22,6 +23,7 @@ const server = new McpServer({
 
 initAnonymizeTextTool(server);
 initAnonymizeFileTool(server);
+initGenerateTestExamplesFromJavaClass(server);
 
 async function main() {
   const transport = new StdioServerTransport();
