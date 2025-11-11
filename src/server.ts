@@ -17,56 +17,33 @@ const server = new McpServer({
   },
 });
 
-server.resource(
-  "persons",
-  "persons://all",
-  {
-    description: "Get all persons data from the database",
-    title: "Persons",
-    mimeType: "application/json",
-  },
-  async (uri) => {
-    const persons = await import("./data/persons.json", {
-      with: { type: "json" },
-    }).then((m) => m.default);
+server.registerTool(
+    'anonymize-text',
+    {
+        title: 'Anonymize Data',
+        description: 'Ananoymize some text',
+        inputSchema: { data: z.any() },
+        outputSchema: { anonymizedData: z.any() }
+    },
+    async ({ data }) => {
+        const transformed: any = {}
+        Object.keys(data).forEach(key => {
+            transformed[key] = anonymizeText(data[key])
+        });
+        console.log(transformed);
+        return {
+            content: [
+                {
+                    type: 'text', text: JSON.stringify({ anonymizedData: transformed }), mimeType: 'application/json',
+                },
+            ],
+            structuredContent: { anonymizedData: transformed },
+        }
+    }
+)
 
-    return {
-      contents: [
-        {
-          uri: uri.href,
-          text: JSON.stringify(persons),
-          mimeType: "application/json",
-        },
-      ],
-    };
-  }
-);
-
-async function createPerson(user: {
-  firstName: string;
-  lastName: string;
-  email: string;
-  address: {
-    streetName: string;
-    houseNumber: string;
-    city: string;
-    state: string;
-    zip: string;
-    country: string;
-  };
-  phoneNumber: string;
-}) {
-  const users = await import("./data/persons.json", {
-    with: { type: "json" },
-  }).then((m) => m.default);
-
-  const id = users.length + 1;
-
-  users.push({ id, ...user });
-
-  await fs.writeFile("./src/data/persons.json", JSON.stringify(users, null, 2));
-
-  return id;
+function anonymizeText(s: any): string {
+    return `${s}-copy`;
 }
 
 async function main() {
