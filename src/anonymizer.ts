@@ -29,11 +29,11 @@ export async function anonymizeObject(data: any, example?: any): Promise<any> {
   return transformed;
 }
 
-function anonymizeText(key: string, value: any, example?: any): string {
+export function anonymizeText(key: string, value: any, example?: any): string {
   return (example ? example[key] : undefined) ?? `**${value}**`;
 }
 
-async function randomPerson(): Promise<Person> {
+export async function randomPerson(): Promise<Person> {
   const users = await import("./data/persons.json", {
     with: { type: "json" },
   }).then((m) => m.default);

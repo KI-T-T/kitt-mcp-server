@@ -2,7 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { anonymizeObject } from "./anonymizer";
 import { z } from "zod";
 
-export function anonymizeTextTool(server: McpServer) {
+export function initAnonymizeTextTool(server: McpServer) {
   server.registerTool(
     "anonymize-text",
     {
