@@ -1,0 +1,7 @@
+{
+  "chat.mcp.serverSampling": {
+    "kitt-mcp-server/.vscode/mcp.json: kitt-mcp-server": {
+      "allowedDuringChat": true
+    }
+  }
+}

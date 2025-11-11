@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "+41791234567",
+    "address": {
+      "streetName": "Main Street",
+      "houseNumber": "123",
+      "city": "Zurich",
+      "zip": "8000",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 2,
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@example.com",
+    "phoneNumber": "+41795551234",
+    "address": {
+      "streetName": "Lake Road",
+      "houseNumber": "45",
+      "city": "Geneva",
+      "zip": "1200",
+      "state": "GE",
+      "country": "CH"
+    }
+  }
+]
