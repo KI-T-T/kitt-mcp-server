@@ -7,7 +7,8 @@ export function initAnonymizeTextTool(server: McpServer) {
     "anonymize-text",
     {
       title: "Anonymize Data",
-      description: "Anonymize some objects by removing personal information.",
+      description:
+        "Anonymize an object passed as a json structure including nested objects and remove personal information.",
       inputSchema: { data: z.any() },
       outputSchema: { anonymizedData: z.any() },
       annotations: {
