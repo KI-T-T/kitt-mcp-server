@@ -21,7 +21,7 @@ export async function anonymizeObject(data: any, example?: any): Promise<any> {
   example = example || (await randomPerson());
   for (const key of Object.keys(data)) {
     if (typeof data[key] === "object" && data[key] !== null) {
-      transformed[key] = await anonymizeObject(data[key]);
+      transformed[key] = await anonymizeObject(data[key], example[key]);
     } else {
       transformed[key] = anonymizeText(key, data[key], example);
     }
