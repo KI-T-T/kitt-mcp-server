@@ -60,7 +60,9 @@ server.registerTool(
     async ({ path }) => {
         let content: object;
         try {
-            content = await fs.readFile(path).then(data => data.toJSON());
+            content = await import(path, {
+                with: { type: "json" },
+            }).then(m => m.default);
         } catch (err: any) {
             const response = {
                 success: false,
@@ -76,13 +78,30 @@ server.registerTool(
             }
         }
         const transformed = await anonymizeObject(content);
+        try {
+            await fs.writeFile(path, JSON.stringify(transformed));
+        } catch (err: any) {
+            const response = {
+                success: false,
+                errorMessage: err
+            }
+            return {
+                content: [
+                    {
+                        type: 'text', text: JSON.stringify(response), mimeType: 'application/json',
+                    },
+                ],
+                structuredContent: response,
+            }
+
+        }
         return {
             content: [
                 {
-                    type: 'text', text: JSON.stringify({ anonymizedData: transformed }), mimeType: 'application/json',
+                    type: 'text', text: JSON.stringify({ success: true }), mimeType: 'application/json',
                 },
             ],
-            structuredContent: { anonymizedData: transformed },
+            structuredContent: { success: true },
         }
     }
 )
