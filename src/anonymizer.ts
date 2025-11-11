@@ -16,7 +16,7 @@ export interface Address {
   country?: string;
 }
 
-async function anonymizeObject(data: any, example?: any): Promise<any> {
+export async function anonymizeObject(data: any, example?: any): Promise<any> {
   const transformed: any = {};
   example = example || (await randomPerson());
   for (const key of Object.keys(data)) {
