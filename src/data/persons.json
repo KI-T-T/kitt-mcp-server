@@ -1,31 +1,301 @@
 [
   {
     "id": 1,
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
-    "phoneNumber": "+41791234567",
+    "firstName": "Lukas",
+    "lastName": "Meier",
+    "email": "lukas.meier@swissmail.ch",
+    "phoneNumber": "+41791234001",
     "address": {
-      "streetName": "Main Street",
-      "houseNumber": "123",
-      "city": "Zurich",
-      "zip": "8000",
+      "streetName": "Bahnhofstrasse",
+      "houseNumber": "12",
+      "city": "Zürich",
+      "zip": "8001",
       "state": "ZH",
       "country": "CH"
     }
   },
   {
     "id": 2,
-    "firstName": "Jane",
-    "lastName": "Smith",
-    "email": "jane.smith@example.com",
-    "phoneNumber": "+41795551234",
+    "firstName": "Sophie",
+    "lastName": "Keller",
+    "email": "sophie.keller@swissmail.ch",
+    "phoneNumber": "+41791234002",
     "address": {
-      "streetName": "Lake Road",
+      "streetName": "Seestrasse",
       "houseNumber": "45",
-      "city": "Geneva",
-      "zip": "1200",
-      "state": "GE",
+      "city": "Zürich",
+      "zip": "8038",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 3,
+    "firstName": "Jonas",
+    "lastName": "Schmid",
+    "email": "jonas.schmid@swissmail.ch",
+    "phoneNumber": "+41791234003",
+    "address": {
+      "streetName": "Hauptstrasse",
+      "houseNumber": "7",
+      "city": "Basel",
+      "zip": "4001",
+      "state": "BS",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 4,
+    "firstName": "Anna",
+    "lastName": "Müller",
+    "email": "anna.mueller@swissmail.ch",
+    "phoneNumber": "+41791234004",
+    "address": {
+      "streetName": "Kirchgasse",
+      "houseNumber": "3",
+      "city": "St. Gallen",
+      "zip": "9000",
+      "state": "SG",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 5,
+    "firstName": "Tim",
+    "lastName": "Weber",
+    "email": "tim.weber@swissmail.ch",
+    "phoneNumber": "+41791234005",
+    "address": {
+      "streetName": "Poststrasse",
+      "houseNumber": "22",
+      "city": "Luzern",
+      "zip": "6003",
+      "state": "LU",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 6,
+    "firstName": "Laura",
+    "lastName": "Schneider",
+    "email": "laura.schneider@swissmail.ch",
+    "phoneNumber": "+41791234006",
+    "address": {
+      "streetName": "Feldstrasse",
+      "houseNumber": "8",
+      "city": "Basel",
+      "zip": "4056",
+      "state": "BS",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 7,
+    "firstName": "Fabian",
+    "lastName": "Graf",
+    "email": "fabian.graf@swissmail.ch",
+    "phoneNumber": "+41791234007",
+    "address": {
+      "streetName": "Bergstrasse",
+      "houseNumber": "19",
+      "city": "Winterthur",
+      "zip": "8400",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 8,
+    "firstName": "Julia",
+    "lastName": "Baumann",
+    "email": "julia.baumann@swissmail.ch",
+    "phoneNumber": "+41791234008",
+    "address": {
+      "streetName": "Sonnenweg",
+      "houseNumber": "5",
+      "city": "Zug",
+      "zip": "6300",
+      "state": "ZG",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 9,
+    "firstName": "Simon",
+    "lastName": "Frei",
+    "email": "simon.frei@swissmail.ch",
+    "phoneNumber": "+41791234009",
+    "address": {
+      "streetName": "Wiesenstrasse",
+      "houseNumber": "14",
+      "city": "Bern",
+      "zip": "3012",
+      "state": "BE",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 10,
+    "firstName": "Nina",
+    "lastName": "Zimmermann",
+    "email": "nina.zimmermann@swissmail.ch",
+    "phoneNumber": "+41791234010",
+    "address": {
+      "streetName": "Lindenstrasse",
+      "houseNumber": "2",
+      "city": "Aarau",
+      "zip": "5000",
+      "state": "AG",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 11,
+    "firstName": "Patrick",
+    "lastName": "Steiner",
+    "email": "patrick.steiner@swissmail.ch",
+    "phoneNumber": "+41791234011",
+    "address": {
+      "streetName": "Schulstrasse",
+      "houseNumber": "11",
+      "city": "Chur",
+      "zip": "7000",
+      "state": "GR",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 12,
+    "firstName": "Mia",
+    "lastName": "Brunner",
+    "email": "mia.brunner@swissmail.ch",
+    "phoneNumber": "+41791234012",
+    "address": {
+      "streetName": "Gartenweg",
+      "houseNumber": "6",
+      "city": "Schaffhausen",
+      "zip": "8200",
+      "state": "SH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 13,
+    "firstName": "Leon",
+    "lastName": "Fischer",
+    "email": "leon.fischer@swissmail.ch",
+    "phoneNumber": "+41791234013",
+    "address": {
+      "streetName": "Talstrasse",
+      "houseNumber": "17",
+      "city": "Baden",
+      "zip": "5400",
+      "state": "AG",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 14,
+    "firstName": "Emma",
+    "lastName": "Wolf",
+    "email": "emma.wolf@swissmail.ch",
+    "phoneNumber": "+41791234014",
+    "address": {
+      "streetName": "Ringstrasse",
+      "houseNumber": "4",
+      "city": "Thalwil",
+      "zip": "8800",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 15,
+    "firstName": "Moritz",
+    "lastName": "Kuhn",
+    "email": "moritz.kuhn@swissmail.ch",
+    "phoneNumber": "+41791234015",
+    "address": {
+      "streetName": "Bachstrasse",
+      "houseNumber": "9",
+      "city": "Binningen",
+      "zip": "4102",
+      "state": "BL",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 16,
+    "firstName": "Lea",
+    "lastName": "Vogt",
+    "email": "lea.vogt@swissmail.ch",
+    "phoneNumber": "+41791234016",
+    "address": {
+      "streetName": "Waldstrasse",
+      "houseNumber": "13",
+      "city": "Küsnacht",
+      "zip": "8700",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 17,
+    "firstName": "Paul",
+    "lastName": "Huber",
+    "email": "paul.huber@swissmail.ch",
+    "phoneNumber": "+41791234017",
+    "address": {
+      "streetName": "Mühlestrasse",
+      "houseNumber": "21",
+      "city": "Rapperswil",
+      "zip": "8640",
+      "state": "SG",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 18,
+    "firstName": "Clara",
+    "lastName": "Beck",
+    "email": "clara.beck@swissmail.ch",
+    "phoneNumber": "+41791234018",
+    "address": {
+      "streetName": "Weinbergstrasse",
+      "houseNumber": "16",
+      "city": "Zürich",
+      "zip": "8006",
+      "state": "ZH",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 19,
+    "firstName": "Jan",
+    "lastName": "Frank",
+    "email": "jan.frank@swissmail.ch",
+    "phoneNumber": "+41791234019",
+    "address": {
+      "streetName": "Marktgasse",
+      "houseNumber": "23",
+      "city": "Thun",
+      "zip": "3600",
+      "state": "BE",
+      "country": "CH"
+    }
+  },
+  {
+    "id": 20,
+    "firstName": "Mara",
+    "lastName": "Schwarz",
+    "email": "mara.schwarz@swissmail.ch",
+    "phoneNumber": "+41791234020",
+    "address": {
+      "streetName": "Rosenweg",
+      "houseNumber": "2",
+      "city": "Baden",
+      "zip": "5400",
+      "state": "AG",
       "country": "CH"
     }
   }

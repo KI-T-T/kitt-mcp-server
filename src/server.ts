@@ -18,33 +18,35 @@ const server = new McpServer({
 });
 
 server.registerTool(
-    'anonymize-text',
-    {
-        title: 'Anonymize Data',
-        description: 'Ananoymize some text',
-        inputSchema: { data: z.any() },
-        outputSchema: { anonymizedData: z.any() }
+  "anonymize-text",
+  {
+    title: "Anonymize Data",
+    description: "Ananoymize some text",
+    inputSchema: { data: z.any() },
+    outputSchema: { anonymizedData: z.any() },
+    annotations: {
+      destructiveHint: false,
+      requiresUserConsent: false,
+      readOnlyHint: true,
+      idempotentHint: false,
+      openWorldHint: false,
     },
-    async ({ data }) => {
-        const transformed: any = {}
-        Object.keys(data).forEach(key => {
-            transformed[key] = anonymizeText(data[key])
-        });
-        console.log(transformed);
-        return {
-            content: [
-                {
-                    type: 'text', text: JSON.stringify({ anonymizedData: transformed }), mimeType: 'application/json',
-                },
-            ],
-            structuredContent: { anonymizedData: transformed },
-        }
-    }
-)
-
-function anonymizeText(s: any): string {
-    return `${s}-copy`;
-}
+  },
+  async ({ data }) => {
+    const transformed = await anonymizeObject(data);
+    console.log(transformed);
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify({ anonymizedData: transformed }),
+          mimeType: "application/json",
+        },
+      ],
+      structuredContent: { anonymizedData: transformed },
+    };
+  }
+);
 
 async function main() {
   const transport = new StdioServerTransport();
@@ -52,3 +54,6 @@ async function main() {
 }
 
 main();
+function anonymizeObject(data: any) {
+  throw new Error("Function not implemented.");
+}
